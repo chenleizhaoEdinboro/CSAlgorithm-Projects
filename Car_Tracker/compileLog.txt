@@ -1,0 +1,303 @@
+.\IndexMinPQ.java:135: error: class, interface, or enum expected
+	 public void insertHash(int i, Key key) {
+	        ^
+.\IndexMinPQ.java:138: error: class, interface, or enum expected
+        N++;
+        ^
+.\IndexMinPQ.java:139: error: class, interface, or enum expected
+		int j=i;
+		^
+.\IndexMinPQ.java:140: error: class, interface, or enum expected
+		while(qp[j]!=-1)
+		^
+.\IndexMinPQ.java:143: error: class, interface, or enum expected
+        qp[j] = N;	
+        ^
+.\IndexMinPQ.java:145: error: class, interface, or enum expected
+        pq[N] = i;    //i is the priority, size n is from 1...n.
+        ^
+.\IndexMinPQ.java:147: error: class, interface, or enum expected
+		int k=i;
+		^
+.\IndexMinPQ.java:148: error: class, interface, or enum expected
+		while(keys[k]!=null)
+		^
+.\IndexMinPQ.java:151: error: class, interface, or enum expected
+        keys[k] = key; //key stored upon their priority, hashmap<vin,i>
+        ^
+.\IndexMinPQ.java:152: error: class, interface, or enum expected
+		System.out.println("key has been inserted into "+i);
+		^
+.\IndexMinPQ.java:154: error: class, interface, or enum expected
+        swim(N);      //N is the pq array index
+        ^
+.\IndexMinPQ.java:156: error: class, interface, or enum expected
+    }//end of insert
+    ^
+.\IndexMinPQ.java:181: error: class, interface, or enum expected
+    public int minIndex() { 
+           ^
+.\IndexMinPQ.java:183: error: class, interface, or enum expected
+        return pq[1];        //pq[0] is unuseable, the minimum element is in the index 1 pos
+        ^
+.\IndexMinPQ.java:184: error: class, interface, or enum expected
+    }
+    ^
+.\IndexMinPQ.java:192: error: class, interface, or enum expected
+    public Key minKey() { 
+           ^
+.\IndexMinPQ.java:194: error: class, interface, or enum expected
+        return keys[pq[1]];        
+        ^
+.\IndexMinPQ.java:195: error: class, interface, or enum expected
+    }
+    ^
+.\IndexMinPQ.java:202: error: class, interface, or enum expected
+    public int delMin() { 
+           ^
+.\IndexMinPQ.java:204: error: class, interface, or enum expected
+        int min = pq[1];        
+        ^
+.\IndexMinPQ.java:205: error: class, interface, or enum expected
+        exch(1, N--);            // swap
+        ^
+.\IndexMinPQ.java:206: error: class, interface, or enum expected
+        sink(1);                 //sink for removal
+        ^
+.\IndexMinPQ.java:207: error: class, interface, or enum expected
+        qp[min] = -1;            // delete
+        ^
+.\IndexMinPQ.java:208: error: class, interface, or enum expected
+        keys[pq[N+1]] = null;    // to help with garbage collection
+        ^
+.\IndexMinPQ.java:209: error: class, interface, or enum expected
+        pq[N+1] = -1;            // not needed
+        ^
+.\IndexMinPQ.java:210: error: class, interface, or enum expected
+        return min; 
+        ^
+.\IndexMinPQ.java:211: error: class, interface, or enum expected
+    }
+    ^
+.\IndexMinPQ.java:221: error: class, interface, or enum expected
+    public Key keyOf(int i) {
+           ^
+.\IndexMinPQ.java:223: error: class, interface, or enum expected
+       if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
+       ^
+.\IndexMinPQ.java:225: error: class, interface, or enum expected
+        else return keys[i];
+        ^
+.\IndexMinPQ.java:226: error: class, interface, or enum expected
+    }
+    ^
+.\IndexMinPQ.java:228: error: class, interface, or enum expected
+	public Key getLowPrice(int hash){
+	       ^
+.\IndexMinPQ.java:230: error: class, interface, or enum expected
+		for(int i = hash; keys[hash]!=null; i = (i+1)%(maxN+1)){
+		^
+.\IndexMinPQ.java:230: error: class, interface, or enum expected
+		for(int i = hash; keys[hash]!=null; i = (i+1)%(maxN+1)){
+		                  ^
+.\IndexMinPQ.java:230: error: class, interface, or enum expected
+		for(int i = hash; keys[hash]!=null; i = (i+1)%(maxN+1)){
+		                                    ^
+.\IndexMinPQ.java:232: error: class, interface, or enum expected
+			System.out.println("i"+i);
+			^
+.\IndexMinPQ.java:233: error: class, interface, or enum expected
+			if(greater(hash-1,hash))
+			^
+.\IndexMinPQ.java:236: error: class, interface, or enum expected
+		}
+		^
+.\IndexMinPQ.java:238: error: class, interface, or enum expected
+	}
+	^
+.\IndexMinPQ.java:240: error: class, interface, or enum expected
+	public int PqOf(int i){
+	       ^
+.\IndexMinPQ.java:242: error: class, interface, or enum expected
+	}
+	^
+.\IndexMinPQ.java:244: error: class, interface, or enum expected
+	public int QpOf(int hashAsIndex){
+	       ^
+.\IndexMinPQ.java:246: error: class, interface, or enum expected
+	}
+	^
+.\IndexMinPQ.java:255: error: class, interface, or enum expected
+    public void changeKey(int i, Key key) {
+           ^
+.\IndexMinPQ.java:257: error: class, interface, or enum expected
+        if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
+        ^
+.\IndexMinPQ.java:258: error: class, interface, or enum expected
+        keys[i] = key;
+        ^
+.\IndexMinPQ.java:259: error: class, interface, or enum expected
+        swim(qp[i]);
+        ^
+.\IndexMinPQ.java:260: error: class, interface, or enum expected
+        sink(qp[i]);
+        ^
+.\IndexMinPQ.java:261: error: class, interface, or enum expected
+    }
+    ^
+.\IndexMinPQ.java:271: error: class, interface, or enum expected
+    public void change(int i, Key key) {
+           ^
+.\IndexMinPQ.java:273: error: class, interface, or enum expected
+    }
+    ^
+.\IndexMinPQ.java:284: error: class, interface, or enum expected
+    public void decreaseKey(int i, Key key) {
+           ^
+.\IndexMinPQ.java:286: error: class, interface, or enum expected
+        if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
+        ^
+.\IndexMinPQ.java:287: error: class, interface, or enum expected
+        if (keys[i].compareTo(key) <= 0)
+        ^
+.\IndexMinPQ.java:289: error: class, interface, or enum expected
+        keys[i] = key;
+        ^
+.\IndexMinPQ.java:290: error: class, interface, or enum expected
+        swim(qp[i]);
+        ^
+.\IndexMinPQ.java:291: error: class, interface, or enum expected
+    }
+    ^
+.\IndexMinPQ.java:302: error: class, interface, or enum expected
+    public void increaseKey(int i, Key key) {
+           ^
+.\IndexMinPQ.java:304: error: class, interface, or enum expected
+        if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
+        ^
+.\IndexMinPQ.java:305: error: class, interface, or enum expected
+        if (keys[i].compareTo(key) >= 0)
+        ^
+.\IndexMinPQ.java:307: error: class, interface, or enum expected
+        keys[i] = key;
+        ^
+.\IndexMinPQ.java:308: error: class, interface, or enum expected
+        sink(qp[i]);
+        ^
+.\IndexMinPQ.java:309: error: class, interface, or enum expected
+    }
+    ^
+.\IndexMinPQ.java:318: error: class, interface, or enum expected
+    public void delete(int i) {
+           ^
+.\IndexMinPQ.java:320: error: class, interface, or enum expected
+        if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
+        ^
+.\IndexMinPQ.java:321: error: class, interface, or enum expected
+        int index = qp[i];
+        ^
+.\IndexMinPQ.java:322: error: class, interface, or enum expected
+        exch(index, N--);
+        ^
+.\IndexMinPQ.java:323: error: class, interface, or enum expected
+        swim(index);
+        ^
+.\IndexMinPQ.java:324: error: class, interface, or enum expected
+        sink(index);
+        ^
+.\IndexMinPQ.java:325: error: class, interface, or enum expected
+        keys[i] = null;
+        ^
+.\IndexMinPQ.java:326: error: class, interface, or enum expected
+        qp[i] = -1;
+        ^
+.\IndexMinPQ.java:327: error: class, interface, or enum expected
+    }
+    ^
+.\IndexMinPQ.java:336: error: class, interface, or enum expected
+		}
+		^
+.\IndexMinPQ.java:339: error: class, interface, or enum expected
+		}
+		^
+.\IndexMinPQ.java:345: error: class, interface, or enum expected
+        pq[i] = pq[j];
+        ^
+.\IndexMinPQ.java:346: error: class, interface, or enum expected
+        pq[j] = swap;
+        ^
+.\IndexMinPQ.java:347: error: class, interface, or enum expected
+        qp[pq[i]] = i;
+        ^
+.\IndexMinPQ.java:348: error: class, interface, or enum expected
+        qp[pq[j]] = j;
+        ^
+.\IndexMinPQ.java:349: error: class, interface, or enum expected
+    }
+    ^
+.\IndexMinPQ.java:355: error: class, interface, or enum expected
+   public void swim(int k)  {
+          ^
+.\IndexMinPQ.java:358: error: class, interface, or enum expected
+            k = k/2;
+            ^
+.\IndexMinPQ.java:359: error: class, interface, or enum expected
+        }
+        ^
+.\IndexMinPQ.java:365: error: class, interface, or enum expected
+            if (j < N && greater(j, j+1)) j++;
+            ^
+.\IndexMinPQ.java:366: error: class, interface, or enum expected
+            if (!greater(k, j)) break;
+            ^
+.\IndexMinPQ.java:367: error: class, interface, or enum expected
+            exch(k, j);
+            ^
+.\IndexMinPQ.java:368: error: class, interface, or enum expected
+            k = j;
+            ^
+.\IndexMinPQ.java:369: error: class, interface, or enum expected
+        }
+        ^
+.\IndexMinPQ.java:384: error: class, interface, or enum expected
+    public Iterator<Integer> iterator() { return new HeapIterator(); }
+           ^
+.\IndexMinPQ.java:384: error: class, interface, or enum expected
+    public Iterator<Integer> iterator() { return new HeapIterator(); }
+                                                                     ^
+.\IndexMinPQ.java:411: error: class, interface, or enum expected
+    public static void main(String[] args) {
+                  ^
+.\IndexMinPQ.java:415: error: class, interface, or enum expected
+        IndexMinPQ<String> pq = new IndexMinPQ<String>(strings.length);
+        ^
+.\IndexMinPQ.java:416: error: class, interface, or enum expected
+        for (int i = 0; i < strings.length; i++) {
+        ^
+.\IndexMinPQ.java:416: error: class, interface, or enum expected
+        for (int i = 0; i < strings.length; i++) {
+                        ^
+.\IndexMinPQ.java:416: error: class, interface, or enum expected
+        for (int i = 0; i < strings.length; i++) {
+                                            ^
+.\IndexMinPQ.java:418: error: class, interface, or enum expected
+        }
+        ^
+.\IndexMinPQ.java:423: error: class, interface, or enum expected
+            StdOut.println(i + " " + strings[i]);
+            ^
+.\IndexMinPQ.java:424: error: class, interface, or enum expected
+        }
+        ^
+.\IndexMinPQ.java:428: error: class, interface, or enum expected
+        for (int i = 0; i < strings.length; i++) {
+        ^
+.\IndexMinPQ.java:428: error: class, interface, or enum expected
+        for (int i = 0; i < strings.length; i++) {
+                        ^
+.\IndexMinPQ.java:428: error: class, interface, or enum expected
+        for (int i = 0; i < strings.length; i++) {
+                                            ^
+Note: .\IndexMinPQ.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 errors

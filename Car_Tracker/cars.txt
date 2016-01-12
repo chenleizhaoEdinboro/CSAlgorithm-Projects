@@ -1,0 +1,9 @@
+2FGK134TYUG109845 Benz AMG 9000.0 899.0 silver
+1HGBH41JXMN109186 Ford Civic 80000.0 900.0 red
+5JKrt90wasd903456 Acura TX 1000 6 black
+0ruop23sdfg498923 Audi A7 20 150 red
+9defe78erty123456 Audi A7 100 19999 blue
+9defe78erty654321 Audi A7  3 2000000 orange
+5JKab90wasd903498 Acura TX 340000 10 white
+5JKab80waop903786 Acura TX 340000 800 green
+9defe78erty654325 Audi A7  0 2000000 orange
